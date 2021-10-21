@@ -2,10 +2,9 @@
  * @Author: yuelin.wang
  * @Date: 2021-10-19 14:17:45
  * @LastEditors: yuelin.wang
- * @LastEditTime: 2021-10-21 14:06:07
+ * @LastEditTime: 2021-10-21 14:14:00
  * @Description: 
 -->
-
 想=通知 B页面
 
 为了解决这种麻烦，产生了vuex。但是我们肯定希望组件的高可复用性，
@@ -50,3 +49,21 @@
 ![](https://api2.mubu.com/v3/document_image/69e94e68-23a4-432a-8c0b-49bb0948043e-3807603.jpg)
 
 ![](https://api2.mubu.com/v3/document_image/654e39a0-7522-4252-ac7e-5524da0719a4-3807603.jpg)
+
+```javascript
+let quickSort = function(arr) {
+　　if (arr.length <= 1) { return arr; }
+　　let pivotIndex = Math.floor(arr.length / 2);
+　　let pivot = arr.splice(pivotIndex, 1)[0];
+　　let left = [];
+　　let right = [];
+　　for (let i = 0; i < arr.length; i++){
+　　　　if (arr[i] < pivot) {
+　　　　　　left.push(arr[i]);
+　　　　} else {
+　　　　　　right.push(arr[i]);
+　　　　}
+　　}
+　　return quickSort(left).concat([pivot], quickSort(right));
+};
+```
